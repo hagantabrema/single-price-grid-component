@@ -1,0 +1,171 @@
+/* ========== GOOGLE FONT ========== */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+    /* ========== COLORS ========== */
+    --cyan: hsl(179, 62%, 43%);
+    --bright-yellow: hsl(71, 73%, 54%);
+    --light-gray: hsl(204, 43%, 93%);
+    --grayish-blue: hsl(218, 22%, 67%);
+    --light-cyan: hsla(179, 62%, 43%, 0.795);
+
+    /* ========== TYPOGRAPHY ========== */
+    --regular-font: 400;
+    --bold-font: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    height: 100%;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--light-gray);
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.card-container {
+    width: 35rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    padding: 2rem;
+}
+
+.card-top {
+    background-color: white;
+    grid-area: card-top;
+    height: 80%;
+}
+
+.top-title {
+    color: var(--cyan);
+    font-size: 1.3rem;
+}
+
+.top-subtitle {
+    color: var(--bright-yellow);
+    margin-top: 1.2rem;
+}
+
+.top-description {
+    color: var(--grayish-blue);
+    font-size: 0.9rem;
+    margin-top: 0.7rem;
+    line-height: 1.5rem;
+}
+
+.card-bottom {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "card-left card-right";
+}
+
+.card-left {
+    background-color: var(--cyan);
+    grid-area: card-left;
+}
+
+.left-subtitle,
+.left-button {
+    text-align: center;
+}
+
+.left-price {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-size: 1.8rem;
+    margin-right: 0.8rem;
+}
+
+.duration {
+    opacity: 0.5;
+}
+
+.left-subtitle {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.left-button {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: var(--bright-yellow);
+    border-radius: 0.3rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    display: block;
+    margin-top: 1.7rem;
+    font-weight: var(--bold-font);
+}
+
+.left-button:hover {
+    opacity: 0.8;
+}
+
+.card-right {
+    background-color: var(--light-cyan);
+    grid-area: card-right;
+}
+
+.right-subtitle {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+.subtitle-list {
+    margin-bottom: 0.2rem;
+}
+
+.top-title,
+.top-subtitle,
+.left-title,
+.right-title,
+.price {
+    font-weight: var(--bold-font);
+}
+
+.left-title,
+.left-price,
+.left-subtitle,
+.left-button,
+.right-title,
+.right-subtitle {
+    color: white;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
